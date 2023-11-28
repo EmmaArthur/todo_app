@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    font-family: "Josefin Sans";
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+h1 {
+    height: 300px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 60px;
+    color: white;
+}
+
+#image-moon , #image-sun {
+    height: 26px;
+    width: 25.11px;
+    margin-top: 60px;
+}
+
+#image-sun {
+    display: none;
+}
+
+.header {
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 0;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    max-width: 541px;
+    max-height: 70px;
+    margin: 0 auto;
+}
+
+#search-box {
+    width: 540px;
+    height: 64px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+.checkbox-input {
+    position: relative;
+    display: inline-block;
+}
+
+.checkbox-input input[type="text"] {
+    padding-left: 30px;
+}
+
+.top-conatiner {
+    margin-bottom: 30px;
+    margin-top: -150px;
+}
+
+#dropdown-contain {
+    max-width: 540px;
+    max-height: 100%;
+}
+.dropdown-option {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 540px;
+    height: 64px;
+    padding: 21px 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.section {
+    border-radius: 4px;
+    background-color: white;
+}
+.dropdown-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.lable-container {
+    display: flex;
+    border-bottom: 1px solid #979797;
+}
+
+.checkmark, #input-checkmark {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.dropdown-option input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.dropdown-option .checkmark::after {
+    left: 4px;
+    top: 0;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.dropdown-option input:checked ~ .checkmark {
+    background-image: linear-gradient(90deg, #55DDFF, #C058F3);
+}
+
+.dropdown-option input[type="checkbox"] {
+    margin-top: 20px;
+}
+.Textline-through {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.close {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    top: 20px;
+    text-align: center;
+}
+  
+.close:hover {
+    background: #bbb;
+}
+
+#buttom-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+.user-action {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.user-action p:first-child {
+    color: #3A7CFD;
+}
+.user-action-moblie {
+    display: none;
+}
+
+section {
+    max-width: 541px;
+    margin: 0px auto;
+}
+
+.show-all, .show-complete, .active , #buttom-text p:last-child:hover, #image-moon, #image-sun{
+    cursor: pointer;
+}
+
+.drag-drop-text, .attribution {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.item.dragging {
+    opacity: 0.6;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+
+}
+
+@media  (max-width: 767px) {
+    .header {
+        background-image: url(./images/bg-mobile-light.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        margin-top: 0;
+    }
+    #input-checkmark {
+        top: 15px;
+    }
+    #top-section {
+        margin-top: 60px;
+    }
+
+    .head, .section, #search-box, #top-section {
+        max-width: 327px;
+    }
+    .lable-container, #search-box {
+        height: 48px;
+    }
+    h1, #image-moon, #image-sun {
+        margin-top: 30px;
+    }
+    #dropdown-contain {
+        margin-top: -10px;
+    }
+
+    .dropdown-option {
+        padding: 15px 40px;
+    }
+    .checkmark {
+        top: 15px;
+    }
+    .user-action-moblie {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        height: 48px;
+        width: 324px;
+        color: #9495A5;
+        margin: auto;
+        background-color: #ffffff;
+        margin-top: 20px;
+    }
+    .show-all, .show-complete, .active {
+        cursor: pointer;
+    }
+    .user-action-moblie p:first-child {
+        color: #3A7CFD;
+    }
+    .section {
+        font-size: 12px;
+    }
+
+    .user-action {
+        display: none;
+    }
+}

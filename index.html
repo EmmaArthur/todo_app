@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles.css">
+    <!--<link rel="stylesheet" href="https://fonts.google.com/specimen/Josefin+Sans">-->
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="head">
+        <h1>Todo</h1>
+        <img src="./images/icon-moon.svg" id="image-moon">
+        <img src="./images/icon-sun.svg" id="image-sun">
+    </div>
+    </div>
+    <section id="top-section">
+      <div class="top-conatiner">
+        <label class="checkbox-input">
+          <span id="input-checkmark"></span>
+          <input type="text" placeholder="Create a new todo..." id="search-box" onkeypress="handleKeyPress(event)">
+        </label>
+      </div>
+    </section>
+    <section class="section">
+      <div id="dropdown-contain" class="sortable-list">
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            Conplete online JavaScript course
+          </label>
+          <span class="close">X</span>
+        </div>  
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            Jog around the park 3x
+          </label>
+          <span class="close">X</span>
+        </div>
+        
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            10 minutes meditation
+          </label>
+          <span class="close">X</span>
+        </div>    
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            Read for 1 hour
+          </label>
+          <span class="close">X</span>
+        </div> 
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            Pick up groceries
+          </label>
+          <span class="close">X</span>
+        </div>   
+        <div class="lable-container item" draggable="true">
+          <label class="dropdown-option">
+            <input type="checkbox" name="dropdwon-list" class="input">
+            <span class="checkmark"></span>
+            Complete Todo App on Frontend Mentor
+          </label>
+          <span class="close">X</span>
+        </div>
+      </div>
+      <div id="buttom-text">
+        <p><span id="item-left"></span> item left</p>
+        <div class="user-action">
+          <p class="show-all" onclick="showAll()">All</p>
+          <p class="active">Active</p>
+          <p class="show-complete" onclick="showComplete()">Completed</p>
+        </div>
+        <p onclick="clearAll()">Clear Completed</p>
+      </div>
+    </section>
+
+    <div class="user-action-moblie">
+      <p class="show-all" onclick="showAll()">All</p>
+      <p class="active">Active</p>
+      <p class="show-complete" onclick="showComplete()">Completed</p>
+    </div>
+
+    <div class="drag-drop-text">Drag and drop to reorder list</div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Emmanuel Arthur</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
