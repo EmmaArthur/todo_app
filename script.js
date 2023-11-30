@@ -74,11 +74,13 @@ function newItem(){
             this.parentElement.remove();
         });
     }
+    
     marked();
     itemsLeft();
+    //itemReduction();
     
     inputValue.value = "";
-    //dragDrop();
+    dragDrop();
 }
 
 
@@ -159,10 +161,7 @@ function itemReduction() {
 
     for (let i = 0; i < close.length; i++) {
         close[i].addEventListener("click", function() {
-            close[i].clicked = !close[i].clicked;
-            if(close[i].clicked) {
-              itemLeft.textContent = itemLeft.textContent - 1;
-            }
+            itemLeft.textContent = itemLeft.textContent - 1;
         });
     }
 
